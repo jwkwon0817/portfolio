@@ -1,0 +1,18 @@
+@import 'styles/variables';
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  background-color: $background-color;
+
+  overflow-y: scroll;
+
+  background-image: url('/src/assets/vector.svg');
+  background-repeat: no-repeat;
+  background-size: cover, 50%;
+  background-position: center;
+
+  position: fixed;
+
+  scroll-behavior: smooth;
+}

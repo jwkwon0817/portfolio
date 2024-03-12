@@ -1,0 +1,65 @@
+@import '../styles/page';
+@import '../styles/mixins';
+
+.Home {
+  @include page();
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 400px;
+
+  @include mobile {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .profileImage {
+    width: 256px;
+    height: 256px;
+
+    @include mobile {
+      width: 128px;
+      height: 128px;
+    }
+  }
+
+  .information {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-end;
+
+    @include mobile {
+      align-items: center;
+    }
+
+    gap: 12px;
+
+    font-family: 'Pretendard-Regular', sans-serif;
+
+    .name {
+      font-size: 64px;
+      color: #fff;
+
+      margin: 0;
+
+      @include mobile {
+        font-size: 32px;
+      }
+    }
+
+    .school {
+      font-size: 32px;
+      color: #bfc1c4;
+
+      margin: 0;
+
+      @include mobile {
+        font-size: 20px;
+      }
+    }
+  }
+}

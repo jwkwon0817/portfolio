@@ -1,0 +1,27 @@
+@import '../styles/mixins';
+
+.Navbar {
+  width: 100%;
+  height: 105px;
+
+  position: fixed;
+  top: 0;
+
+  z-index: 9999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    width: 508px;
+    height: 29px;
+
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+      justify-content: space-evenly;
+    }
+  }
+}

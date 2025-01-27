@@ -4,6 +4,7 @@ import cn from 'classnames';
 import Icon from '~/components/Icon';
 import { IconName } from '~/components/Icon/icon-set';
 import HStack from '~/components/Layout/HStack';
+import Typo from '~/components/Typo';
 import { useBreakpoint } from '~/hooks/useBreakpoint';
 import * as s from '../styles/default.css';
 
@@ -21,11 +22,13 @@ export default function DefaultButton(props: DefaultButtonProps) {
   return (
     <HStack
       onClick={onClick}
-      classNames={cn(s.base, className)}
+      className={cn(s.base, className)}
       padding={isMobile ? 8 : 12}
       spacing={8}>
       <Icon name={IconName.ARROW_DOWNWARD} size={isMobile ? 16 : 20} />
-      <p className={s.text}>{children}</p>
+      <Typo variant={'span'} size={isMobile ? 12 : 16}>
+        {children}
+      </Typo>
     </HStack>
   );
 }

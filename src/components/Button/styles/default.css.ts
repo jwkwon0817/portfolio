@@ -1,6 +1,5 @@
 import { style } from '@vanilla-extract/css';
 import { cubicBezier } from '~/lib/constant/cubicBezier';
-import { mediaQuery } from '~/lib/utils/styles/mediaQuery';
 
 export const base = style({
   borderRadius: 12,
@@ -13,12 +12,4 @@ export const base = style({
   ':active': {
     transform: 'scale(0.95)',
   },
-});
-
-export const text = style({
-  fontSize: 16,
-  userSelect: 'none',
-  ...mediaQuery.mobile({
-    fontSize: 12,
-  }),
 });

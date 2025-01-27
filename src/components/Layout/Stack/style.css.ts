@@ -3,6 +3,7 @@ import { style } from '@vanilla-extract/css';
 export const base = style({
   display: 'flex',
   width: 'fit-content',
+  height: 'fit-content',
 });
 
 export const vertical = style({
@@ -15,4 +16,8 @@ export const horizontal = style({
 
 export const fullWidth = style({
   width: '100%',
+});
+
+export const fullHeight = style({
+  height: '100%',
 });

@@ -14,6 +14,7 @@ export interface StackProps {
   padding?: Padding;
   children?: ChildrenProps;
   fullWidth?: boolean;
+  fullHeight?: boolean;
   classNames?: string;
   onClick?: () => void;
 }
@@ -27,6 +28,7 @@ export default function Stack(props: StackProps) {
     padding = 0,
     children,
     fullWidth = false,
+    fullHeight = false,
     classNames,
     onClick,
   } = props;
@@ -38,6 +40,7 @@ export default function Stack(props: StackProps) {
     classNames,
     isHorizontal ? s.horizontal : s.vertical,
     fullWidth && s.fullWidth,
+    fullHeight && s.fullHeight,
   );
 
   return (

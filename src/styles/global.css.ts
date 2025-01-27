@@ -14,4 +14,5 @@ globalStyle('*', {
   color: '#000',
   lineHeight: 1.4,
   fontWeight: 400,
+  letterSpacing: '-0.01',
 });

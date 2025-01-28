@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import * as s from './layout.css';
 
 import '@/styles/global.css';
@@ -6,12 +6,13 @@ import '@/styles/global.css';
 export const metadata: Metadata = {
   title: 'Jeewon Kwon',
   description: 'Sunrin Internet High School Student',
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
-  },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export default function RootLayout({

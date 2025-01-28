@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import * as s from './layout.css';
 
 import '~/styles/global.css';
 
@@ -14,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='ko'>
-      <body>{children}</body>
+      <body className={s.layout}>{children}</body>
     </html>
   );
 }

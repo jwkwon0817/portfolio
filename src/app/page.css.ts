@@ -1,14 +1,12 @@
 import { style } from '@vanilla-extract/css';
 import { mediaQuery } from '~/lib/utils/styles/mediaQuery';
 
-export const base = style({
-  width: '100%',
-  height: '100vh',
-});
+export const base = style({});
 
-export const button = style({
-  position: 'absolute',
-  bottom: 32,
+export const wrapper = style({
+  height: '100vh',
+  overflowY: 'scroll',
+  padding: '20px 0',
 });
 
 export const container = style({

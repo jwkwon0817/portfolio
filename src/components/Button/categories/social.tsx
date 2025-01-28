@@ -3,7 +3,7 @@
 import cn from 'classnames';
 import { AnimatePresence, motion } from 'motion/react';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Icon from '~/components/Icon';
 import { IconName } from '~/components/Icon/icon-set';
 import HStack from '~/components/Layout/HStack';
@@ -26,21 +26,28 @@ export default function SocialButton({
 }: SocialButtonProps) {
   const [isCopied, setIsCopied] = useState(false);
   const { isMobile, isMobileDesktop } = useBreakpoint();
+  const [isBrowser, setIsBrowser] = useState(false);
+
+  useEffect(() => {
+    setIsBrowser(true);
+  }, []);
+
+  const handleCopy = () => {
+    if (copyable && isBrowser) {
+      navigator.clipboard.writeText(children);
+      setIsCopied(true);
+      setTimeout(() => {
+        setIsCopied(false);
+      }, 3000);
+    }
+  };
 
   const content = (
     <HStack
       spacing={6}
       padding={isMobile ? [4, 6] : isMobileDesktop ? [6, 8] : [8, 12]}
       className={cn(s.base, leadingIcon === IconName.INSTAGRAM && s.instagram)}
-      onClick={() => {
-        if (copyable) {
-          navigator.clipboard.writeText(children);
-          setIsCopied(true);
-          setTimeout(() => {
-            setIsCopied(false);
-          }, 3000);
-        }
-      }}>
+      onClick={handleCopy}>
       <Icon
         name={leadingIcon}
         size={isMobile ? 16 : isMobileDesktop ? 20 : 24}

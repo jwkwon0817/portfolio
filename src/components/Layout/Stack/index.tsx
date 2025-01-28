@@ -17,7 +17,9 @@ export interface StackProps {
   fullHeight?: boolean;
   className?: string;
   reverse?: boolean;
+  style?: React.CSSProperties;
   onClick?: () => void;
+  id?: string;
 }
 
 export default function Stack(props: StackProps) {
@@ -26,13 +28,15 @@ export default function Stack(props: StackProps) {
     align = StackAlign.CENTER,
     justify = StackAlign.CENTER,
     spacing = 0,
-    padding = 0,
+    padding,
     children,
     fullWidth = false,
     fullHeight = false,
     className,
+    style,
     reverse = false,
     onClick,
+    id,
   } = props;
 
   const isHorizontal = direction === StackDirection.HORIZONTAL;
@@ -51,14 +55,30 @@ export default function Stack(props: StackProps) {
     fullHeight && s.fullHeight,
   );
 
-  return (
-    <div
-      className={baseClassnames}
-      style={{
+  const getStyles = () => {
+    if (padding) {
+      return {
         padding: getPaddingString(padding),
         gap: `${spacing}px`,
         justifyContent: justify,
         alignItems: align,
+      };
+    } else {
+      return {
+        gap: `${spacing}px`,
+        justifyContent: justify,
+        alignItems: align,
+      };
+    }
+  };
+
+  return (
+    <div
+      id={id}
+      className={baseClassnames}
+      style={{
+        ...style,
+        ...getStyles(),
       }}
       onClick={onClick}>
       {children}

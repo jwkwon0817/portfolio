@@ -1,6 +1,6 @@
 'use client';
 
-import * as motion from 'motion/react-client';
+import { motion } from 'motion/react';
 import Image from 'next/image';
 import { Button } from '~/components/Button';
 import { IconName } from '~/components/Icon/icon-set';
@@ -14,9 +14,12 @@ import VStack from '~/components/Layout/VStack';
 import Typo from '~/components/Typo';
 import { useBreakpoint } from '~/hooks/useBreakpoint';
 import { ChildrenProps } from '~/lib/types/children-props';
+import { useDeeplink } from '~/lib/utils/link';
 
 export default function HomeMainProfileSection() {
   const { isMobile, isMobileDesktop } = useBreakpoint();
+
+  const { getGithubLink, getInstagramLink } = useDeeplink();
 
   return (
     <Stack
@@ -73,7 +76,7 @@ export default function HomeMainProfileSection() {
             <SocialButtonContainer>
               <Button.Social
                 leadingIcon={IconName.GITHUB}
-                href={'https://github.com/jwkwon0817'}>
+                href={getGithubLink('jwkwon0817')}>
                 jwkwon0817
               </Button.Social>
             </SocialButtonContainer>
@@ -88,7 +91,7 @@ export default function HomeMainProfileSection() {
         </SocialButtonGroup>
       </VStack>
       <Stack
-        fullWidth
+        fullWidth={isMobile}
         direction={
           isMobile ? StackDirection.HORIZONTAL : StackDirection.VERTICAL
         }
@@ -115,7 +118,7 @@ export default function HomeMainProfileSection() {
             +82 10 2310 4403
           </Button.Social>
           <Button.Social
-            href={'https://instagram.com/jeewon__k'}
+            href={getInstagramLink('jeewon__k')}
             leadingIcon={IconName.INSTAGRAM}>
             jeewon__k
           </Button.Social>

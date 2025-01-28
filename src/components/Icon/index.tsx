@@ -24,6 +24,8 @@ export default function Icon(props: IconProps) {
       style={{
         minWidth: size,
         minHeight: size,
+        color: color,
+        fill: color,
       }}
     />
   );

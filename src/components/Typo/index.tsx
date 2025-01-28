@@ -1,9 +1,14 @@
+import cn from 'classnames';
+import * as s from './style.css';
+
 interface TypoProps {
   variant?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span';
   size?: number;
   color?: string;
   weight?: number;
   children: string;
+  disableUserSelect?: boolean;
+  className?: string;
 }
 
 export default function Typo(props: TypoProps) {
@@ -13,6 +18,8 @@ export default function Typo(props: TypoProps) {
     color = '#000',
     weight = 400,
     children,
+    className,
+    disableUserSelect = false,
   } = props;
 
   const style = {
@@ -21,24 +28,13 @@ export default function Typo(props: TypoProps) {
     fontWeight: weight,
   };
 
-  switch (variant) {
-    case 'h1':
-      return <h1 style={style}>{children}</h1>;
-    case 'h2':
-      return <h2 style={style}>{children}</h2>;
-    case 'h3':
-      return <h3 style={style}>{children}</h3>;
-    case 'h4':
-      return <h4 style={style}>{children}</h4>;
-    case 'h5':
-      return <h5 style={style}>{children}</h5>;
-    case 'h6':
-      return <h6 style={style}>{children}</h6>;
-    case 'p':
-      return <p style={style}>{children}</p>;
-    case 'span':
-      return <span style={style}>{children}</span>;
-    default:
-      return <p style={style}>{children}</p>;
-  }
+  const Tag = variant;
+
+  return (
+    <Tag
+      className={cn(className, disableUserSelect && s.disableUserSelect)}
+      style={style}>
+      {children}
+    </Tag>
+  );
 }

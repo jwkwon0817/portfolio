@@ -12,7 +12,7 @@
       },
       {
         "type": "instagram",
-        "url": "https://instagram.com/sunrin-today",
+        "url": "https://instagram.com/sunrin_today",
         "label": "sunrin_today"
       },
       {
@@ -85,8 +85,8 @@
       },
       {
         "type": "npm",
-        "url": "https://npmjs.com/package/@tapie/inspire-react",
-        "label": "tapie.kr/inspire-react"
+        "url": "https://npmjs.com/package/@tapie-kr/inspire-react",
+        "label": "tapie-kr/inspire-react"
       }
     ]
   },

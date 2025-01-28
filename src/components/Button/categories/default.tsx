@@ -1,11 +1,11 @@
 'use client';
 
+import Icon from '@/components/Icon';
+import { IconName } from '@/components/Icon/icon-set';
+import HStack from '@/components/Layout/HStack';
+import Typo from '@/components/Typo';
+import { useBreakpoint } from '@/hooks/useBreakpoint';
 import cn from 'classnames';
-import Icon from '~/components/Icon';
-import { IconName } from '~/components/Icon/icon-set';
-import HStack from '~/components/Layout/HStack';
-import Typo from '~/components/Typo';
-import { useBreakpoint } from '~/hooks/useBreakpoint';
 import * as s from '../styles/default.css';
 
 interface DefaultButtonProps {

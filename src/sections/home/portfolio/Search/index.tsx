@@ -1,10 +1,10 @@
-import Icon from '~/components/Icon';
-import { IconName } from '~/components/Icon/icon-set';
-import HStack from '~/components/Layout/HStack';
-import { StackAlign, StackJustify } from '~/components/Layout/shared';
-import VStack from '~/components/Layout/VStack';
-import Typo from '~/components/Typo';
-import { useBreakpoint } from '~/hooks/useBreakpoint';
+import Icon from '@/components/Icon';
+import { IconName } from '@/components/Icon/icon-set';
+import HStack from '@/components/Layout/HStack';
+import { StackAlign, StackJustify } from '@/components/Layout/shared';
+import VStack from '@/components/Layout/VStack';
+import Typo from '@/components/Typo';
+import { useBreakpoint } from '@/hooks/useBreakpoint';
 import * as s from './style.css';
 
 interface HomePortfolioSearchSectionProps {

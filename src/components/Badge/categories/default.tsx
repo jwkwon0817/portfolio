@@ -1,5 +1,5 @@
-import { IconName } from '~/components/Icon/icon-set';
-import { hexToRgba } from '~/lib/utils/styles/hexToRgba';
+import { IconName } from '@/components/Icon/icon-set';
+import { hexToRgba } from '@/lib/utils/styles/hexToRgba';
 import Icon from '../../Icon';
 import HStack from '../../Layout/HStack';
 import Typo from '../../Typo';

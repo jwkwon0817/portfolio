@@ -1,6 +1,6 @@
 import { globalStyle } from '@vanilla-extract/css';
-import '~/styles/fonts/index.css';
-import { inspireFontKit } from '~/styles/fonts/index.css';
+import '@/styles/fonts/index.css';
+import { inspireFontKit } from '@/styles/fonts/index.css';
 import './reset.css';
 
 globalStyle('html, body', {

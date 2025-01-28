@@ -1,9 +1,9 @@
+import { ChildrenProps } from '@/lib/types/children-props';
+import { Padding } from '@/lib/types/padding';
 import cn from 'classnames';
-import { ChildrenProps } from '~/lib/types/children-props';
-import { Padding } from '~/lib/types/padding';
 import { StackAlign, StackDirection, StackJustify } from '../shared';
 
-import { getPaddingString } from '~/lib/utils/styles/padding';
+import { getPaddingString } from '@/lib/utils/styles/padding';
 import * as s from './style.css';
 
 export interface StackProps {

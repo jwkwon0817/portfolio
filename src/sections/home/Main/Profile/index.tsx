@@ -1,20 +1,20 @@
 'use client';
 
-import { motion } from 'motion/react';
-import Image from 'next/image';
-import { Button } from '~/components/Button';
-import { IconName } from '~/components/Icon/icon-set';
+import { Button } from '@/components/Button';
+import { IconName } from '@/components/Icon/icon-set';
 import {
   StackAlign,
   StackDirection,
   StackJustify,
-} from '~/components/Layout/shared';
-import Stack from '~/components/Layout/Stack';
-import VStack from '~/components/Layout/VStack';
-import Typo from '~/components/Typo';
-import { useBreakpoint } from '~/hooks/useBreakpoint';
-import { ChildrenProps } from '~/lib/types/children-props';
-import { useDeeplink } from '~/lib/utils/link';
+} from '@/components/Layout/shared';
+import Stack from '@/components/Layout/Stack';
+import VStack from '@/components/Layout/VStack';
+import Typo from '@/components/Typo';
+import { useBreakpoint } from '@/hooks/useBreakpoint';
+import { ChildrenProps } from '@/lib/types/children-props';
+import { useDeeplink } from '@/lib/utils/link';
+import { motion } from 'motion/react';
+import Image from 'next/image';
 
 export default function HomeMainProfileSection() {
   const { isMobile, isMobileDesktop } = useBreakpoint();

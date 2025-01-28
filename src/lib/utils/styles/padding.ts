@@ -1,4 +1,4 @@
-import { Padding } from '~/lib/types/padding';
+import { Padding } from '@/lib/types/padding';
 
 const getPaddingString = (padding: Padding) => {
   if (typeof padding === 'number') {

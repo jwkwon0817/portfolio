@@ -1,12 +1,12 @@
+import Icon from '@/components/Icon';
+import { IconName } from '@/components/Icon/icon-set';
+import HStack from '@/components/Layout/HStack';
+import Typo from '@/components/Typo';
+import { useBreakpoint } from '@/hooks/useBreakpoint';
+import { useDeeplink } from '@/lib/utils/link';
+import { PortfolioLink } from '@/sections/home/portfolio/Result';
 import cn from 'classnames';
 import Link from 'next/link';
-import Icon from '~/components/Icon';
-import { IconName } from '~/components/Icon/icon-set';
-import HStack from '~/components/Layout/HStack';
-import Typo from '~/components/Typo';
-import { useBreakpoint } from '~/hooks/useBreakpoint';
-import { useDeeplink } from '~/lib/utils/link';
-import { PortfolioLink } from '~/sections/home/portfolio/Result';
 import * as s from '../styles/link.css';
 
 interface LinkButtonProps {

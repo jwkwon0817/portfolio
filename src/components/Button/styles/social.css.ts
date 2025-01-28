@@ -1,5 +1,5 @@
+import { cubicBezier } from '@/lib/constant/cubicBezier';
 import { style } from '@vanilla-extract/css';
-import { cubicBezier } from '~/lib/constant/cubicBezier';
 
 export const container = style({
   position: 'relative',

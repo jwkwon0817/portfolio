@@ -1,20 +1,20 @@
 'use client';
 
-import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
-import { Badge } from '~/components/Badge';
-import { Tech } from '~/components/Badge/categories/tech';
-import { Button } from '~/components/Button';
-import HStack from '~/components/Layout/HStack';
+import { Badge } from '@/components/Badge';
+import { Tech } from '@/components/Badge/categories/tech';
+import { Button } from '@/components/Button';
+import HStack from '@/components/Layout/HStack';
 import {
   StackAlign,
   StackDirection,
   StackJustify,
-} from '~/components/Layout/shared';
-import Stack from '~/components/Layout/Stack';
-import VStack from '~/components/Layout/VStack';
-import Typo from '~/components/Typo';
-import { useBreakpoint } from '~/hooks/useBreakpoint';
+} from '@/components/Layout/shared';
+import Stack from '@/components/Layout/Stack';
+import VStack from '@/components/Layout/VStack';
+import Typo from '@/components/Typo';
+import { useBreakpoint } from '@/hooks/useBreakpoint';
+import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
 import * as s from './style.css';
 
 export interface PortfolioLink {

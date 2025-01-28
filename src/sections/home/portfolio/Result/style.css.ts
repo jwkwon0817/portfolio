@@ -1,5 +1,5 @@
+import { mediaQuery } from '@/lib/utils/styles/mediaQuery';
 import { style } from '@vanilla-extract/css';
-import { mediaQuery } from '~/lib/utils/styles/mediaQuery';
 
 export const image = style({
   borderRadius: 20,

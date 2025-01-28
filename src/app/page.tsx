@@ -1,16 +1,16 @@
 'use client';
 
-import VStack from '~/components/Layout/VStack';
+import VStack from '@/components/Layout/VStack';
 
+import { Button } from '@/components/Button';
+import HStack from '@/components/Layout/HStack';
+import { StackAlign, StackJustify } from '@/components/Layout/shared';
+import { useBreakpoint } from '@/hooks/useBreakpoint';
+import HomeMainInfoSection from '@/sections/home/main/Info';
+import HomeMainProfileSection from '@/sections/home/main/Profile';
+import HomePortfolioResultSection from '@/sections/home/portfolio/Result';
+import HomePortfolioSearchSection from '@/sections/home/portfolio/Search';
 import { useCallback, useState } from 'react';
-import { Button } from '~/components/Button';
-import HStack from '~/components/Layout/HStack';
-import { StackAlign, StackJustify } from '~/components/Layout/shared';
-import { useBreakpoint } from '~/hooks/useBreakpoint';
-import HomeMainInfoSection from '~/sections/home/main/Info';
-import HomeMainProfileSection from '~/sections/home/main/Profile';
-import HomePortfolioResultSection from '~/sections/home/portfolio/Result';
-import HomePortfolioSearchSection from '~/sections/home/portfolio/Search';
 import * as s from './page.css';
 
 export default function Home() {

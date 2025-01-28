@@ -3,19 +3,19 @@
 import React, { useEffect, useState } from 'react';
 import * as s from './style.css';
 
-import cn from 'classnames';
-import { Badge } from '~/components/Badge';
-import { IconName } from '~/components/Icon/icon-set';
-import HStack from '~/components/Layout/HStack';
+import { Badge } from '@/components/Badge';
+import { IconName } from '@/components/Icon/icon-set';
+import HStack from '@/components/Layout/HStack';
 import {
   StackAlign,
   StackDirection,
   StackJustify,
-} from '~/components/Layout/shared';
-import Stack from '~/components/Layout/Stack';
-import VStack from '~/components/Layout/VStack';
-import Typo from '~/components/Typo';
-import { useBreakpoint } from '~/hooks/useBreakpoint';
+} from '@/components/Layout/shared';
+import Stack from '@/components/Layout/Stack';
+import VStack from '@/components/Layout/VStack';
+import Typo from '@/components/Typo';
+import { useBreakpoint } from '@/hooks/useBreakpoint';
+import cn from 'classnames';
 
 const content = `안녕하세요. 저는 현재 선린인터넷고등학교에 재학중인 권지원입니다.
   현재 저는 웹과 앱 개발에 관심이 있는 학생으로, 이를 위해 노력하고 있습니다.

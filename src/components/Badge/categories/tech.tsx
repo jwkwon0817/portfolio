@@ -1,12 +1,12 @@
 'use client';
 
-import Icon from '~/components/Icon';
-import { IconName } from '~/components/Icon/icon-set';
-import HStack from '~/components/Layout/HStack';
-import { hexToRgba } from '~/lib/utils/styles/hexToRgba';
+import Icon from '@/components/Icon';
+import { IconName } from '@/components/Icon/icon-set';
+import HStack from '@/components/Layout/HStack';
+import { hexToRgba } from '@/lib/utils/styles/hexToRgba';
 
-import Typo from '~/components/Typo';
-import { useBreakpoint } from '~/hooks/useBreakpoint';
+import Typo from '@/components/Typo';
+import { useBreakpoint } from '@/hooks/useBreakpoint';
 import * as s from '../styles//tech.css';
 
 export type Tech =

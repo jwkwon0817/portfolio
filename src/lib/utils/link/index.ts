@@ -18,8 +18,16 @@ const createDeeplink = (
     }`;
   }
 
-  return `https://${scheme}.com${path}${
-    params ? '/' + Object.values(params)[0] : ''
+  if (scheme === 'github') {
+    return `https://github.com/${params?.username || ''}${
+      params?.name ? '/' + params.name : ''
+    }`;
+  } else if (scheme === 'instagram') {
+    return `https://www.instagram.com/${params?.username || ''}`;
+  }
+
+  return `https://${scheme}.com/${path}${
+    params ? '/' + Object.values(params).join('/') : ''
   }`;
 };
 

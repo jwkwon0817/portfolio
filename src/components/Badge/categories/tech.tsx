@@ -1,9 +1,12 @@
+'use client';
+
 import Icon from '~/components/Icon';
 import { IconName } from '~/components/Icon/icon-set';
 import HStack from '~/components/Layout/HStack';
 import { hexToRgba } from '~/lib/utils/styles/hexToRgba';
 
 import Typo from '~/components/Typo';
+import { useBreakpoint } from '~/hooks/useBreakpoint';
 import * as s from '../styles//tech.css';
 
 export type Tech =
@@ -114,19 +117,23 @@ interface TechBadgeProps {
 export default function TechBadge(props: TechBadgeProps) {
   const { type } = props;
 
+  const { isMobile } = useBreakpoint();
+
   return (
     <HStack
       className={s.base}
-      padding={[4, 8]}
-      spacing={6}
+      padding={isMobile ? [2, 6] : [4, 8]}
+      spacing={isMobile ? 4 : 6}
       style={{
         background: hexToRgba(
           getTechBackgroundColor(type),
           getTechOpacity(type),
         ),
       }}>
-      <Icon name={getTechIcon(type)} size={20} />
-      <Typo color={getTechColor(type)}>{type}</Typo>
+      <Icon name={getTechIcon(type)} size={isMobile ? 16 : 20} />
+      <Typo color={getTechColor(type)} size={isMobile ? 12 : 16}>
+        {type}
+      </Typo>
     </HStack>
   );
 }

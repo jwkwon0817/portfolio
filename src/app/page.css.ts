@@ -1,5 +1,5 @@
 import { style } from '@vanilla-extract/css';
-import { mediaQuery } from '~/lib/utils/styles/mediaQuery';
+import { mediaQuery } from './../lib/utils/styles/mediaQuery';
 
 export const base = style({});
 
@@ -16,5 +16,14 @@ export const container = style({
   }),
   ...mediaQuery.mobile({
     maxWidth: 330,
+  }),
+});
+
+export const portfolioWrapper = style({
+  ...mediaQuery.mobileDesktop({
+    maxWidth: 600,
+  }),
+  ...mediaQuery.mobile({
+    maxWidth: 300,
   }),
 });

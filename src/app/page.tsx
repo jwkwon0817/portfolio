@@ -38,7 +38,7 @@ export default function Home() {
           </Button.Default>
         </HStack>
       </VStack>
-      <VStack fullWidth fullHeight>
+      <VStack fullWidth fullHeight className={s.portfolioWrapper}>
         <HomePortfolioResultSection query={undefined} />
       </VStack>
     </VStack>

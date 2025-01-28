@@ -21,6 +21,7 @@ import Python from './assets/python.svg';
 import React from './assets/react.svg';
 import Rollup from './assets/rollup.svg';
 import School from './assets/school.svg';
+import Search from './assets/search.svg';
 import SpringBoot from './assets/spring-boot.svg';
 import Storybook from './assets/storybook.svg';
 import SwiftUI from './assets/swiftui.svg';
@@ -60,6 +61,7 @@ export enum IconName {
   DOCKER_GLYPH = 'docker-glyph',
   LINK = 'link',
   NPM = 'npm',
+  SEARCH = 'search',
 }
 
 export const IconNameMap = {
@@ -93,4 +95,5 @@ export const IconNameMap = {
   [IconName.DOCKER_GLYPH]: DockerGlyph,
   [IconName.LINK]: Link,
   [IconName.NPM]: Npm,
+  [IconName.SEARCH]: Search,
 } as const;

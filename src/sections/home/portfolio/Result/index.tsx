@@ -42,7 +42,7 @@ export default function HomePortfolioResultSection(
   const [portfolios, setPortfolios] = useState<Portfolio[]>([]);
   const [filteredPortfolios, setFilteredPortfolios] = useState<Portfolio[]>([]);
 
-  const { isMobile, isMobileDesktop, isDesktop } = useBreakpoint();
+  const { isMobile } = useBreakpoint();
 
   useEffect(() => {
     fetch('/data/_portfolio.json')
@@ -56,7 +56,10 @@ export default function HomePortfolioResultSection(
     if (query || query === '') {
       setFilteredPortfolios(
         portfolios.filter((portfolio) => {
-          return portfolio.name.includes(query);
+          return (
+            portfolio.name.includes(query) ||
+            portfolio.description.includes(query)
+          );
         }),
       );
     } else {
@@ -65,11 +68,7 @@ export default function HomePortfolioResultSection(
   }, [portfolios, query]);
 
   return (
-    <VStack
-      spacing={150}
-      align={StackAlign.START}
-      id={'portfolio'}
-      fullWidth={isMobile}>
+    <VStack spacing={150} align={StackAlign.START} fullWidth={isMobile}>
       {filteredPortfolios.map((portfolio, index) => {
         return <PortfolioCard key={index} portfolio={portfolio} />;
       })}

@@ -33,7 +33,7 @@ export default function SocialButton({
   }, []);
 
   const handleCopy = () => {
-    if (copyable && isBrowser) {
+    if (copyable && isBrowser && window.isSecureContext) {
       navigator.clipboard.writeText(children);
       setIsCopied(true);
       setTimeout(() => {

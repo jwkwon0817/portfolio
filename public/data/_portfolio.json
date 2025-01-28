@@ -122,7 +122,7 @@
   {
     "name": "Portfolio",
     "description": "한 해 동안 제가 개발한 작품들을 모아놓은 포트폴리오입니다.\n처음부터 포트폴리오 사이트의 컴포넌트 설계를 진행하면서\nNextJS의 아키텍쳐와 컴포넌트를 효율적으로 다루는 법을 익힐 수 있었습니다.\n또한, Vanilla Extract를 사용하여 CSS-in-JS를 적용하면서\nCSS를 효율적으로 관리하는 방법을 익힐 수 있었습니다.",
-    "skills": ["TypeScript", "NextJS", "Vanilla Extract", "Bun"],
+    "skills": ["TypeScript", "NextJS", "Vanilla Extract", "Docker"],
     "thumbnail": "/assets/thumbnail/portfolio.png",
     "links": [
       {

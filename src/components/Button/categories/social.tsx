@@ -8,6 +8,7 @@ import Icon from '~/components/Icon';
 import { IconName } from '~/components/Icon/icon-set';
 import HStack from '~/components/Layout/HStack';
 import Typo from '~/components/Typo';
+import { useBreakpoint } from '~/hooks/useBreakpoint';
 import * as s from '../styles/social.css';
 
 interface SocialButtonProps {
@@ -24,11 +25,12 @@ export default function SocialButton({
   copyable,
 }: SocialButtonProps) {
   const [isCopied, setIsCopied] = useState(false);
+  const { isMobile, isMobileDesktop } = useBreakpoint();
 
   const content = (
     <HStack
       spacing={6}
-      padding={[8, 12]}
+      padding={isMobile ? [4, 6] : isMobileDesktop ? [6, 8] : [8, 12]}
       className={cn(s.base, leadingIcon === IconName.INSTAGRAM && s.instagram)}
       onClick={() => {
         if (copyable) {
@@ -39,8 +41,14 @@ export default function SocialButton({
           }, 3000);
         }
       }}>
-      <Icon name={leadingIcon} size={24} />
-      <Typo variant='p' size={18} disableUserSelect>
+      <Icon
+        name={leadingIcon}
+        size={isMobile ? 16 : isMobileDesktop ? 20 : 24}
+      />
+      <Typo
+        variant='p'
+        size={isMobile ? 14 : isMobileDesktop ? 16 : 18}
+        disableUserSelect>
         {children}
       </Typo>
     </HStack>

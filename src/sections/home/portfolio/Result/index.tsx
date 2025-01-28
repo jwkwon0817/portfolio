@@ -110,6 +110,7 @@ function PortfolioCard(props: PortfolioCardProps) {
       justify={StackJustify.START}
       align={isMobile ? StackAlign.CENTER : StackAlign.START}>
       <Image
+        unoptimized
         src={portfolio.thumbnail}
         width={isDesktop ? 600 : 300}
         height={getImageHeight(isDesktop ? 600 : 300)}

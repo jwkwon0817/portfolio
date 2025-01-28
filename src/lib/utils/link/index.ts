@@ -18,11 +18,7 @@ const createDeeplink = (
     }`;
   }
 
-  if (scheme === 'github') {
-    return `https://github.com/${params?.username || ''}${
-      params?.name ? '/' + params.name : ''
-    }`;
-  } else if (scheme === 'instagram') {
+  if (scheme === 'instagram') {
     return `https://www.instagram.com/${params?.username || ''}`;
   }
 
@@ -38,21 +34,11 @@ export const useDeeplink = () => {
     setIsMounted(true);
   }, []);
 
-  const getGithubLink = (username: string) => {
-    return createDeeplink('github', 'user', { username });
-  };
-
-  const getGithubRepoLink = (username: string, repo: string) => {
-    return createDeeplink('github', 'repo', { owner: username, name: repo });
-  };
-
   const getInstagramLink = (username: string) => {
     return createDeeplink('instagram', 'user', { username });
   };
 
   return {
-    getGithubLink: isMounted ? getGithubLink : () => '',
-    getGithubRepoLink: isMounted ? getGithubRepoLink : () => '',
     getInstagramLink: isMounted ? getInstagramLink : () => '',
   };
 };

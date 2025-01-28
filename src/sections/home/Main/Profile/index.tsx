@@ -19,7 +19,7 @@ import { useDeeplink } from '~/lib/utils/link';
 export default function HomeMainProfileSection() {
   const { isMobile, isMobileDesktop } = useBreakpoint();
 
-  const { getGithubLink, getInstagramLink } = useDeeplink();
+  const { getInstagramLink } = useDeeplink();
 
   return (
     <Stack
@@ -76,7 +76,7 @@ export default function HomeMainProfileSection() {
             <SocialButtonContainer>
               <Button.Social
                 leadingIcon={IconName.GITHUB}
-                href={getGithubLink('jwkwon0817')}>
+                href={'https://github.com/jwkwon0817'}>
                 jwkwon0817
               </Button.Social>
             </SocialButtonContainer>
@@ -142,7 +142,7 @@ function SocialButtonGroup(props: SocialButtonProps) {
         visible: {
           opacity: 1,
           transition: {
-            staggerChildren: 0.1,
+            staggerChildren: 0.15,
           },
         },
       }}
@@ -163,7 +163,7 @@ function SocialButtonContainer(props: SocialButtonContainerProps) {
   return (
     <motion.div
       variants={{
-        hidden: { y: 10, opacity: 0 },
+        hidden: { y: 30, opacity: 0 },
         visible: {
           y: 0,
           opacity: 1,

@@ -26,7 +26,8 @@ export type Tech =
   | 'Embedded'
   | 'Kotlin'
   | 'Spring Boot'
-  | 'Docker';
+  | 'Docker'
+  | 'React Native';
 
 const getTechBackgroundColor = (tech: Tech) => {
   const colorList = {
@@ -47,6 +48,7 @@ const getTechBackgroundColor = (tech: Tech) => {
     Kotlin: '#7F52FF',
     'Spring Boot': '#77BC1F',
     Docker: '#019BC6',
+    'React Native': '#61DAFB',
   };
 
   return colorList[tech];
@@ -71,6 +73,7 @@ const getTechColor = (tech: Tech) => {
     Kotlin: '#7F52FF',
     'Spring Boot': '#77BC1F',
     Docker: '#019BC6',
+    'React Native': '#61DAFB',
   };
 
   return colorList[tech];
@@ -79,7 +82,7 @@ const getTechColor = (tech: Tech) => {
 const getTechOpacity = (tech: Tech) => {
   if (tech === 'Motion' || tech === 'Bun') {
     return 0.3;
-  } else if (tech === 'React') {
+  } else if (tech === 'React' || tech === 'React Native') {
     return 0.25;
   } else {
     return 0.15;
@@ -105,6 +108,7 @@ const getTechIcon = (tech: Tech) => {
     Kotlin: IconName.KOTLIN,
     'Spring Boot': IconName.SPRING_BOOT,
     Docker: IconName.DOCKER,
+    'React Native': IconName.REACT,
   };
 
   return iconList[tech];

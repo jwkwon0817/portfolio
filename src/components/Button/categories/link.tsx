@@ -40,27 +40,17 @@ const getLinkFallback = (link: PortfolioLink) => {
 export default function LinkButton(props: LinkButtonProps) {
   const { link } = props;
 
-  const { getGithubLink, getInstagramLink, getGithubRepoLink } = useDeeplink();
+  const { getInstagramLink } = useDeeplink();
   const { isMobile } = useBreakpoint();
 
   const isPrivate = link.label === undefined;
 
   const isInstagram = link.type === 'instagram';
-  const isGitHub =
-    link.type === 'github' && link.label?.split('/').length === 1;
-  const isGitHubRepo =
-    link.type === 'github' && link.label?.split('/').length === 2;
 
   const getLink = (link: PortfolioLink): string => {
     if (link.url && link.label) {
-      if (isGitHub) {
-        return getGithubLink(link.label);
-      } else if (isInstagram) {
+      if (isInstagram) {
         return getInstagramLink(link.label);
-      } else if (isGitHubRepo) {
-        const [owner, repo] = link.label.split('/');
-
-        return getGithubRepoLink(owner, repo);
       } else {
         return link.url;
       }

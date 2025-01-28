@@ -26,7 +26,7 @@ export default function DefaultButton(props: DefaultButtonProps) {
       padding={isMobile ? 8 : 12}
       spacing={8}>
       <Icon name={IconName.ARROW_DOWNWARD} size={isMobile ? 16 : 20} />
-      <Typo variant={'span'} size={isMobile ? 12 : 16}>
+      <Typo variant={'span'} size={isMobile ? 12 : 16} disableUserSelect>
         {children}
       </Typo>
     </HStack>

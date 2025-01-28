@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import * as s from './layout.css';
 
-import '~/styles/global.css';
+import '@/styles/global.css';
 
 export const metadata: Metadata = {
   title: 'Jeewon Kwon',

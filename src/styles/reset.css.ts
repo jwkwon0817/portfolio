@@ -1,4 +1,4 @@
-import '~/styles/layer.css';
+import '@/styles/layer.css';
 import { inspireFontKit } from './fonts/index.css';
 import { resetGlobalStyle } from './layer.css';
 

@@ -1,5 +1,5 @@
+import { ChildrenProps } from '@/lib/types/children-props';
 import cn from 'classnames';
-import { ChildrenProps } from '~/lib/types/children-props';
 import * as s from './style.css';
 
 interface TypoProps {

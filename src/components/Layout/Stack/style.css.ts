@@ -10,8 +10,16 @@ export const vertical = style({
   flexDirection: 'column',
 });
 
+export const verticalReverse = style({
+  flexDirection: 'column-reverse',
+});
+
 export const horizontal = style({
   flexDirection: 'row',
+});
+
+export const horizontalReverse = style({
+  flexDirection: 'row-reverse',
 });
 
 export const fullWidth = style({

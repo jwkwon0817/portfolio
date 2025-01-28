@@ -1,23 +1,42 @@
+'use client';
+
 import * as motion from 'motion/react-client';
 import Image from 'next/image';
 import { Button } from '~/components/Button';
 import { IconName } from '~/components/Icon/icon-set';
-import HStack from '~/components/Layout/HStack';
-import { StackAlign } from '~/components/Layout/shared';
+import {
+  StackAlign,
+  StackDirection,
+  StackJustify,
+} from '~/components/Layout/shared';
+import Stack from '~/components/Layout/Stack';
 import VStack from '~/components/Layout/VStack';
 import Typo from '~/components/Typo';
+import { useBreakpoint } from '~/hooks/useBreakpoint';
 import { ChildrenProps } from '~/lib/types/children-props';
 
 export default function HomeMainProfileSection() {
+  const { isMobile, isMobileDesktop } = useBreakpoint();
+
   return (
-    <HStack fullWidth spacing={320}>
+    <Stack
+      direction={isMobile ? StackDirection.VERTICAL : StackDirection.HORIZONTAL}
+      reverse={isMobile ? true : false}
+      fullWidth
+      justify={StackJustify.BETWEEN}
+      align={isMobile ? StackAlign.START : StackAlign.CENTER}
+      spacing={isMobile ? 24 : 0}>
       <VStack spacing={32} align={StackAlign.START}>
         <VStack spacing={4} align={StackAlign.START}>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}>
-            <Typo variant={'h1'} size={64} weight={700}>
+            <Typo
+              variant={'h1'}
+              size={isMobile ? 24 : isMobileDesktop ? 48 : 64}
+              weight={700}
+              noWrap>
               새로운 기술을 배워나가는
             </Typo>
           </motion.div>
@@ -28,13 +47,22 @@ export default function HomeMainProfileSection() {
               duration: 0.5,
               delay: 0.5,
             }}>
-            <Typo variant={'h1'} size={64} weight={400}>
+            <Typo
+              variant={'h1'}
+              size={isMobile ? 24 : isMobileDesktop ? 48 : 64}
+              weight={400}
+              noWrap>
               학생 개발자, 권지원입니다.
             </Typo>
           </motion.div>
         </VStack>
         <SocialButtonGroup>
-          <HStack spacing={12}>
+          <Stack
+            direction={
+              isMobile ? StackDirection.VERTICAL : StackDirection.HORIZONTAL
+            }
+            align={isMobile ? StackAlign.START : StackAlign.CENTER}
+            spacing={12}>
             <SocialButtonContainer>
               <Button.Social
                 leadingIcon={IconName.MAIL}
@@ -56,22 +84,33 @@ export default function HomeMainProfileSection() {
                 jwkwon0817
               </Button.Social>
             </SocialButtonContainer>
-          </HStack>
+          </Stack>
         </SocialButtonGroup>
       </VStack>
-      <VStack spacing={24}>
-        <VStack spacing={24}>
+      <Stack
+        fullWidth
+        direction={
+          isMobile ? StackDirection.HORIZONTAL : StackDirection.VERTICAL
+        }
+        justify={isMobile ? StackJustify.BETWEEN : StackJustify.CENTER}
+        spacing={24}>
+        <VStack spacing={isMobile ? 8 : 24}>
           <Image
             src={'/assets/profile.png'}
-            width={220}
-            height={220}
+            width={isMobile ? 80 : isMobileDesktop ? 180 : 220}
+            height={isMobile ? 80 : isMobileDesktop ? 180 : 220}
             alt={'Profile Image'}
           />
           <Typo variant={'h4'} size={18}>
             Software, 119th
           </Typo>
         </VStack>
-        <HStack spacing={12}>
+        <Stack
+          direction={
+            isMobile ? StackDirection.VERTICAL : StackDirection.HORIZONTAL
+          }
+          spacing={12}
+          align={StackAlign.END}>
           <Button.Social copyable leadingIcon={IconName.PHONE}>
             +82 10 2310 4403
           </Button.Social>
@@ -80,9 +119,9 @@ export default function HomeMainProfileSection() {
             leadingIcon={IconName.INSTAGRAM}>
             jeewon__k
           </Button.Social>
-        </HStack>
-      </VStack>
-    </HStack>
+        </Stack>
+      </Stack>
+    </Stack>
   );
 }
 

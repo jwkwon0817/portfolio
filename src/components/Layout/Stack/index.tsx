@@ -16,6 +16,7 @@ export interface StackProps {
   fullWidth?: boolean;
   fullHeight?: boolean;
   className?: string;
+  reverse?: boolean;
   onClick?: () => void;
 }
 
@@ -30,6 +31,7 @@ export default function Stack(props: StackProps) {
     fullWidth = false,
     fullHeight = false,
     className,
+    reverse = false,
     onClick,
   } = props;
 
@@ -38,7 +40,13 @@ export default function Stack(props: StackProps) {
   const baseClassnames = cn(
     s.base,
     className,
-    isHorizontal ? s.horizontal : s.vertical,
+    isHorizontal
+      ? reverse
+        ? s.horizontalReverse
+        : s.horizontal
+      : reverse
+      ? s.verticalReverse
+      : s.vertical,
     fullWidth && s.fullWidth,
     fullHeight && s.fullHeight,
   );

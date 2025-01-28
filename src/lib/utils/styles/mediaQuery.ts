@@ -7,6 +7,11 @@ export const mediaQuery = {
       [breakpoints.mobile]: styles,
     },
   }),
+  mobileDesktop: (styles: CSSProperties) => ({
+    '@media': {
+      [breakpoints.mobileDesktop]: styles,
+    },
+  }),
   desktop: (styles: CSSProperties) => ({
     '@media': {
       [breakpoints.desktop]: styles,

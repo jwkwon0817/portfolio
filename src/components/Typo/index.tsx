@@ -8,6 +8,7 @@ interface TypoProps {
   weight?: number;
   children: string;
   disableUserSelect?: boolean;
+  noWrap?: boolean;
   className?: string;
 }
 
@@ -20,6 +21,7 @@ export default function Typo(props: TypoProps) {
     children,
     className,
     disableUserSelect = false,
+    noWrap = false,
   } = props;
 
   const style = {
@@ -32,7 +34,11 @@ export default function Typo(props: TypoProps) {
 
   return (
     <Tag
-      className={cn(className, disableUserSelect && s.disableUserSelect)}
+      className={cn(
+        className,
+        disableUserSelect && s.disableUserSelect,
+        noWrap && s.noWrap,
+      )}
       style={style}>
       {children}
     </Tag>

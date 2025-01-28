@@ -1,16 +1,19 @@
 import ArrowDownward from './assets/arrow_downward.svg';
 import Bun from './assets/bun.svg';
 import Copy from './assets/copy.svg';
+import DockerGlyph from './assets/docker-glyph.svg';
 import Docker from './assets/docker.svg';
 import Embedded from './assets/embedded.svg';
 import FastAPI from './assets/fastapi.svg';
 import GitHub from './assets/github.svg';
 import Instagram from './assets/instagram.svg';
 import Kotlin from './assets/kotlin.svg';
+import Link from './assets/link.svg';
 import Mail from './assets/mail.svg';
 import Motion from './assets/motion.svg';
 import NestJS from './assets/nestjs.svg';
 import NextJS from './assets/nextjs.svg';
+import Npm from './assets/npm.svg';
 import Pencil from './assets/pencil.svg';
 import Phone from './assets/phone.svg';
 import PostgreSQL from './assets/postgresql.svg';
@@ -54,6 +57,9 @@ export enum IconName {
   KOTLIN = 'kotlin',
   SPRING_BOOT = 'spring-boot',
   DOCKER = 'docker',
+  DOCKER_GLYPH = 'docker-glyph',
+  LINK = 'link',
+  NPM = 'npm',
 }
 
 export const IconNameMap = {
@@ -84,4 +90,7 @@ export const IconNameMap = {
   [IconName.KOTLIN]: Kotlin,
   [IconName.SPRING_BOOT]: SpringBoot,
   [IconName.DOCKER]: Docker,
+  [IconName.DOCKER_GLYPH]: DockerGlyph,
+  [IconName.LINK]: Link,
+  [IconName.NPM]: Npm,
 } as const;

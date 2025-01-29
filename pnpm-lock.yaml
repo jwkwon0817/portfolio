@@ -11,6 +11,9 @@ importers:
       '@vanilla-extract/css':
         specifier: ^1.17.0
         version: 1.17.0
+      '@vanilla-extract/next-plugin':
+        specifier: ^2.4.8
+        version: 2.4.8(@types/node@20.17.16)(next@15.1.0(@babel/core@7.26.7)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(terser@5.37.0)(webpack@5.97.1)
       '@vercel/speed-insights':
         specifier: ^1.1.0
         version: 1.1.0(next@15.1.0(@babel/core@7.26.7)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)
@@ -45,9 +48,6 @@ importers:
       '@types/react-dom':
         specifier: ^19
         version: 19.0.3(@types/react@19.0.8)
-      '@vanilla-extract/next-plugin':
-        specifier: ^2.4.8
-        version: 2.4.8(@types/node@20.17.16)(next@15.1.0(@babel/core@7.26.7)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(terser@5.37.0)(webpack@5.97.1)
       eslint:
         specifier: ^9
         version: 9.19.0

@@ -6,7 +6,7 @@ WORKDIR /app
 ENV time_zone=Asia/Seoul
 
 RUN corepack enable
-RUN corepack prepare pnpm --activate
+RUN corepack prepare pnpm@latest --activate
 RUN pnpm install --frozen-lockfile
 
 FROM builder AS runner

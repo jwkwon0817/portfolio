@@ -1,8 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import * as s from './layout.css';
 
-import { SpeedInsights } from '@vercel/speed-insights/next';
-
 import '@/styles/global.css';
 export const metadata: Metadata = {
   title: 'Jeewon Kwon',
@@ -16,7 +14,7 @@ export const metadata: Metadata = {
     siteName: 'Jeewon Kwon',
     images: [
       {
-        url: 'https://www.jwkwon0817.me/_next/image?url=%2Fassets%2Fprofile.png&w=256&q=75', // OG 이미지 경로
+        url: 'https://www.jwkwon0817.me/_next/image?url=%2Fassets%2Fprofile.png&w=256&q=75',
         alt: 'Jeewon Kwon',
       },
     ],
@@ -38,7 +36,6 @@ export default function RootLayout({
   return (
     <html lang='ko'>
       <body className={s.layout}>{children}</body>
-      <SpeedInsights />
     </html>
   );
 }

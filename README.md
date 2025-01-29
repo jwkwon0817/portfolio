@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 포트폴리오 웹사이트
 
-## Getting Started
+## 프로젝트 소개
 
-First, run the development server:
+이 프로젝트는 개인 포트폴리오를 위한 반응형 웹사이트입니다. 방문자들에게 저를 소개하기 위해 개발되었습니다..
+
+## 사용 기술
+
+- Frontend: TypeScript, Next.js
+- Styling: Vanilla Extract
+- Animation: Motion
+- Deployment: Dokploy
+- Version Control: Git
+
+## 시작하기
+
+### 설치 방법
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/jwkwon0817/portfolio.git
+
+cd portfolio
+
+pnpm install
+
+pnpm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 프로젝트 구조
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+portfolio/
+├── public/
+├── src/
+│   ├── app/
+│   ├── components/
+│   ├── hooks/
+│   ├── lib/
+│   ├── sections/
+│   └── styles/
+├── .dockerignore
+├── .gitignore
+├── Dockerfile
+├── eslint.config.mjs
+├── next.config.ts
+├── next-env.d.ts
+├── next.config.ts
+├── package.json
+├── pnpm-lock.yaml
+├── README.md
+└── tsconfig.json
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 배포
 
-## Learn More
+이 프로젝트는 Dokploy를 통해 자동 배포됩니다. main 브랜치에 변경사항을 push하면 자동으로 배포가 진행됩니다.
 
-To learn more about Next.js, take a look at the following resources:
+## 라이선스
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+이 프로젝트는 MIT 라이선스 하에 배포됩니다. 자세한 내용은 [LICENSE](https://github.com/jwkwon0817/portfolio/blob/main/LICENSE) 파일을 참조하세요.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 연락처
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+이메일: jeewon.kwon.0817@gmail.com
+웹사이트: https://www.jwkwon0817.me
+GitHub: https://github.com/jwkwon0817

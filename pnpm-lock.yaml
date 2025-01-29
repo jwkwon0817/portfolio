@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@svgr/webpack':
+        specifier: ^8.1.0
+        version: 8.1.0(typescript@5.7.3)
       '@vanilla-extract/css':
         specifier: ^1.17.0
         version: 1.17.0
@@ -36,9 +39,6 @@ importers:
       '@eslint/eslintrc':
         specifier: ^3
         version: 3.2.0
-      '@svgr/webpack':
-        specifier: ^8.1.0
-        version: 8.1.0(typescript@5.7.3)
       '@types/node':
         specifier: ^20
         version: 20.17.16

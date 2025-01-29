@@ -106,7 +106,7 @@
   {
     "name": "Chromate",
     "description": "2024년 웹프로그래밍 수행평가로 제작한 작품입니다.\n팔이 불편한 사람들도 웹서핑을 편하게 할 수 있게 만들자라는 취지로\n웹 브라우저 내의 확장 프로그램을 이용하여 사용자의 음성을 인식받고\n그 음성을 토대로 브라우저의 각종 액션을 수행해주는 확장프로그램입니다.",
-    "skills": ["TypeScript", "React", "Python", "FastAPI"],
+    "skills": ["TypeScript", "React", "Python", "FastAPI", "Docker"],
     "thumbnail": "/assets/thumbnail/chromate.png",
     "links": [
       {
